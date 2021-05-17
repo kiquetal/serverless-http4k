@@ -1,0 +1,19 @@
+
+service: serverless-http4k
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: java11
+  lambdaHashingVersion: 20201221
+  stage: dev
+  region: us-east-1
+  profile: devKiquetal
+package:
+  artifact: build/libs/hello.jar
+
+functions:
+  hello:
+    handler: com.serverless.Simple
+    events:
+      - http: GET hello
