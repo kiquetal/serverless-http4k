@@ -1,4 +1,3 @@
-
 service: serverless-http4k
 frameworkVersion: '2'
 
